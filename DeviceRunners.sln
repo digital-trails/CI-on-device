@@ -23,6 +23,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceRunners.XHarness.Maui
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceRunners.XHarness.Xunit", "DeviceRunners\DeviceRunners.XHarness.Xunit\DeviceRunners.XHarness.Xunit.csproj", "{D52724F2-4F80-4CF5-878B-5978F0A95F3A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceRunners.UITesting.Xunit", "DeviceRunners\DeviceRunners.UITesting.Xunit\DeviceRunners.UITesting.Xunit.csproj", "{B7AA3403-A6E0-4300-9723-DA06959C1D91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceRunners.UITesting", "DeviceRunners\DeviceRunners.UITesting\DeviceRunners.UITesting.csproj", "{7040FAB6-5FD1-4D37-9DEB-1529802E2D34}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceRunners.UITesting.Maui", "DeviceRunners\DeviceRunners.UITesting.Maui\DeviceRunners.UITesting.Maui.csproj", "{1D67F157-3201-49D4-AA58-40716D7D00EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +73,18 @@ Global
 		{D52724F2-4F80-4CF5-878B-5978F0A95F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D52724F2-4F80-4CF5-878B-5978F0A95F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D52724F2-4F80-4CF5-878B-5978F0A95F3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7AA3403-A6E0-4300-9723-DA06959C1D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7AA3403-A6E0-4300-9723-DA06959C1D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7AA3403-A6E0-4300-9723-DA06959C1D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7AA3403-A6E0-4300-9723-DA06959C1D91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7040FAB6-5FD1-4D37-9DEB-1529802E2D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7040FAB6-5FD1-4D37-9DEB-1529802E2D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7040FAB6-5FD1-4D37-9DEB-1529802E2D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7040FAB6-5FD1-4D37-9DEB-1529802E2D34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D67F157-3201-49D4-AA58-40716D7D00EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D67F157-3201-49D4-AA58-40716D7D00EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D67F157-3201-49D4-AA58-40716D7D00EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D67F157-3201-49D4-AA58-40716D7D00EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +97,9 @@ Global
 		{995B6A72-F478-4F2D-A6F5-EE12659C878E} = {DBF1C119-C96C-4DD3-810B-52451603475C}
 		{4C87BA8C-DB7C-4924-AC6B-56121137E167} = {DBF1C119-C96C-4DD3-810B-52451603475C}
 		{D52724F2-4F80-4CF5-878B-5978F0A95F3A} = {DBF1C119-C96C-4DD3-810B-52451603475C}
+		{B7AA3403-A6E0-4300-9723-DA06959C1D91} = {DBF1C119-C96C-4DD3-810B-52451603475C}
+		{7040FAB6-5FD1-4D37-9DEB-1529802E2D34} = {DBF1C119-C96C-4DD3-810B-52451603475C}
+		{1D67F157-3201-49D4-AA58-40716D7D00EC} = {DBF1C119-C96C-4DD3-810B-52451603475C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DABD41C-B083-429E-AE1E-971CFF8DC199}

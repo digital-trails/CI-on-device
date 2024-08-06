@@ -49,9 +49,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DeviceRunners\DeviceRunners.UITesting.Maui\DeviceRunners.UITesting.Maui.csproj" />
     <ProjectReference Include="..\SampleXunitTestProject\SampleXunitTestProject.csproj" />
-	<ProjectReference Include="..\DeviceRunners\DeviceRunners.VisualRunners.Xunit\DeviceRunners.VisualRunners.Xunit.csproj" />
+    <ProjectReference Include="..\DeviceRunners\DeviceRunners.VisualRunners.Xunit\DeviceRunners.VisualRunners.Xunit.csproj" />
     <ProjectReference Include="..\DeviceRunners\DeviceRunners.VisualRunners.Maui\DeviceRunners.VisualRunners.Maui.csproj" />
+    <ProjectReference Include="..\DeviceRunners\DeviceRunners.UITesting.Xunit\DeviceRunners.UITesting.Xunit.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TestingMode)' == 'XHarness'">

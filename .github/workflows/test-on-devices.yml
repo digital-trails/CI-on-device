@@ -76,7 +76,6 @@ jobs:
     - name: Restore App Projects
       run: |
         dotnet restore -p:TargetFramework=${{ env.TEST_TARGET_FRAMEWORK }}
-        dotnet restore -p:TargetFramework=net8.0
     - name: Publish App
       run: |
         dotnet publish SampleMauiApp/SampleMauiApp.csproj \
