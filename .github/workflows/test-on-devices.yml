@@ -73,6 +73,9 @@ jobs:
         dotnet android sdk install --package "platforms;android-34"
         dotnet android sdk list --installed
         dotnet android sdk info
+    - name: Restore App Projects
+      run: |
+        dotnet restore -p:TargetFramework=${{ env.TEST_TARGET_FRAMEWORK }}
     - name: Publish App
       run: |
         dotnet publish SampleMauiApp/SampleMauiApp.csproj \
