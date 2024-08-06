@@ -76,6 +76,7 @@ jobs:
     - name: Publish App
       run: |
         dotnet publish SampleMauiApp/SampleMauiApp.csproj \
+          --no-restore \
           -f ${{ env.TEST_TARGET_FRAMEWORK }} \
           -r ${{ env.TEST_RUNTIME_IDENTIFIER }} \
           -c ${{ env.TEST_CONFIGURATION }} \
