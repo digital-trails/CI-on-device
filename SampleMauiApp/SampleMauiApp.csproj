@@ -68,9 +68,8 @@
     <ProjectReference Include="..\DeviceRunners\DeviceRunners.UITesting.Xunit\DeviceRunners.UITesting.Xunit.csproj" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TestingMode)' == 'XHarness'">
-	<PackageReference Include="Microsoft.DotNet.XHarness.TestRunners.Common" Version="9.0.0-prerelease.24066.3" /> <!-- In theory we don't need this, but in practice do for some reason... Otherwise when ExcludeIos=True publishing fails -->
-	<ProjectReference Include="..\DeviceRunners\DeviceRunners.XHarness\DeviceRunners.XHarness.csproj" /> <!-- In theory we don't need this, but in practice do for some reason... Otherwise when ExcludeIos=True publishing fails -->
+  <!--<ItemGroup Condition="'$(TestingMode)' == 'XHarness'">-->
+  <ItemGroup>
 	<ProjectReference Include="..\DeviceRunners\DeviceRunners.XHarness.Xunit\DeviceRunners.XHarness.Xunit.csproj" />
     <ProjectReference Include="..\DeviceRunners\DeviceRunners.XHarness.Maui\DeviceRunners.XHarness.Maui.csproj" />
   </ItemGroup>
