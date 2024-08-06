@@ -60,7 +60,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Setup Required Tools
-      uses: ./.github/workflows/setup-tools
+      uses: ./.github/actions/setup
     - uses: actions/setup-java@v4
       with:
         distribution: 'microsoft'
