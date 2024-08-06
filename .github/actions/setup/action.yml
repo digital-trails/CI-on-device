@@ -13,10 +13,14 @@ runs:
     uses: actions/setup-dotnet@v3
     with:
       dotnet-version: 8.0.x
-  - name: Setup .NET MAUI
-    if: runner.os != 'Windows'
+  - name: Setup .NET MAUI on Mac
+    if: runner.os == 'macOS'
     shell: pwsh
     run: dotnet workload install maui --source https://api.nuget.org/v3/index.json
+  - name: Setup .NET MAUI on Linux # see https://github.com/dotnet/maui/issues/15929
+    if: runner.os == 'Linux'
+    shell: pwsh
+    run: dotnet workload install maui-android --source https://api.nuget.org/v3/index.json
   - name: Setup Local .NET Tools
     shell: pwsh
     run: dotnet tool restore
