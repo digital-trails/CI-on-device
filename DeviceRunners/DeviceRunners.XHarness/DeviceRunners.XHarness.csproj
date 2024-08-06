@@ -1,7 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Choose>
+    <When Condition="'$(ExcludeIos)'=='True'">
+	  <PropertyGroup>
+		<TargetFrameworks>net8.0;net8.0-android</TargetFrameworks>
+	  </PropertyGroup>
+	</When>
+	<Otherwise>
+      <PropertyGroup>
+		<TargetFrameworks>net8.0;net8.0-android;net8.0-ios</TargetFrameworks>
+	  </PropertyGroup>
+	</Otherwise>
+  </Choose>
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0;net8.0-android;net8.0-ios</TargetFrameworks>
     <IsPackable>true</IsPackable>
   </PropertyGroup>
 
