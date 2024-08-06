@@ -21,7 +21,7 @@ jobs:
       uses: ./.github/actions/setup
     - name: Publish App
       run: |
-        dotnet build sample/SampleMauiApp/SampleMauiApp.csproj \
+        dotnet build SampleMauiApp/SampleMauiApp.csproj \
           -f ${{ env.TEST_TARGET_FRAMEWORK }} \
           -r ${{ env.TEST_RUNTIME_IDENTIFIER }} \
           -c ${{ env.TEST_CONFIGURATION }} \
@@ -35,7 +35,7 @@ jobs:
             --target ios-simulator-64 \
             --timeout="00:03:00" \
             --launch-timeout=00:06:00 \
-            --app sample/SampleMauiApp/bin/${{ env.TEST_CONFIGURATION }}/${{ env.TEST_TARGET_FRAMEWORK }}/${{ env.TEST_RUNTIME_IDENTIFIER }}/SampleMauiApp.app \
+            --app SampleMauiApp/bin/${{ env.TEST_CONFIGURATION }}/${{ env.TEST_TARGET_FRAMEWORK }}/${{ env.TEST_RUNTIME_IDENTIFIER }}/SampleMauiApp.app \
             --output-directory artifacts \
           && code=0 && break || code=$? && sleep 15
         done
@@ -75,7 +75,7 @@ jobs:
         dotnet android sdk info
     - name: Publish App
       run: |
-        dotnet publish sample/SampleMauiApp/SampleMauiApp.csproj \
+        dotnet publish SampleMauiApp/SampleMauiApp.csproj \
           -f ${{ env.TEST_TARGET_FRAMEWORK }} \
           -r ${{ env.TEST_RUNTIME_IDENTIFIER }} \
           -c ${{ env.TEST_CONFIGURATION }} \
@@ -93,7 +93,7 @@ jobs:
         api-level: 34
         arch: x86_64
         target: google_apis
-        script: dotnet xharness android test --package-name com.companyname.samplemauiapp --instrumentation devicerunners.xharness.maui.XHarnessInstrumentation --app sample/SampleMauiApp/bin/${{ env.TEST_CONFIGURATION }}/${{ env.TEST_TARGET_FRAMEWORK }}/${{ env.TEST_RUNTIME_IDENTIFIER }}/publish/com.companyname.samplemauiapp-Signed.apk --output-directory artifacts
+        script: dotnet xharness android test --package-name com.companyname.samplemauiapp --instrumentation devicerunners.xharness.maui.XHarnessInstrumentation --app SampleMauiApp/bin/${{ env.TEST_CONFIGURATION }}/${{ env.TEST_TARGET_FRAMEWORK }}/${{ env.TEST_RUNTIME_IDENTIFIER }}/publish/com.companyname.samplemauiapp-Signed.apk --output-directory artifacts
     - name: Upload Artifacts
       uses: actions/upload-artifact@v1
       if: ${{ always() }}
