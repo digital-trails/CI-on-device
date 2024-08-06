@@ -1,0 +1,22 @@
+#https://github.com/mattleibow/DeviceRunners/blob/9654972f2869e80757edb32489fe6fa3ff15307d/.github/workflows/setup-tools/action.yml
+name: Setup Tools
+description: Installs and configures all the required tools
+runs:
+  using: composite
+  steps:
+  - name: Setup Xcode
+    uses: maxim-lobanov/setup-xcode@v1
+    if: runner.os == 'macOS'
+    with:
+      xcode-version: latest-stable
+  - name: Setup .NET
+    uses: actions/setup-dotnet@v3
+    with:
+      dotnet-version: 8.0.x
+  - name: Setup .NET MAUI
+    if: runner.os != 'Windows'
+    shell: pwsh
+    run: dotnet workload install maui --source https://api.nuget.org/v3/index.json
+  - name: Setup Local .NET Tools
+    shell: pwsh
+    run: dotnet tool restore
