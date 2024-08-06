@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
 
-using DeviceRunners.UITesting;
 using DeviceRunners.VisualRunners;
 #if MODE_XHARNESS
 using DeviceRunners.XHarness;
@@ -14,7 +13,6 @@ public static class MauiProgram
 	{
 		var builder = MauiApp.CreateBuilder();
 		builder
-			.ConfigureUITesting()
 #if MODE_XHARNESS
 			.UseXHarnessTestRunner(conf => conf
 				.AddTestAssembly(typeof(MauiProgram).Assembly)
